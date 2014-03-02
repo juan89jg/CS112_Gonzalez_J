@@ -1,0 +1,17 @@
+//Class DateTest to test capabilities of Date Class
+public class DateTest 
+{
+	//main method begins program execution
+	public static void main( String[] args)
+	{
+		//Date objects initialized with the 3 parameters
+		Date date1 = new Date(3,5,1959);
+		Date date2 = new Date(7,19,2012);
+		
+		//Display Date #1
+		date1.displayDate();
+		//Display Date #2
+		date2.displayDate();
+	}//end method
+
+}// end class DateTest

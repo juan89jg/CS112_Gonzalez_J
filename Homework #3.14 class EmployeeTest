@@ -1,0 +1,28 @@
+//Class EmployeeTest
+
+public class EmployeeTest 
+{
+	public static void main(String[] args)
+	{
+		//Create two Employee objects
+		Employee employee1 = new Employee("Edgar", "Sanchez", 1612.30);
+		Employee employee2 = new Employee("Jonathan", "Perez", 2612.95);
+		
+		//Display the two Employee's name and Salary
+		System.out.printf("Employee #1: %s's Yearly Salary: $%.2f\n",
+				employee1.getEmployeeName(), employee1.getSalary() );
+		System.out.printf("Employee #2: %s's Yearly Salary: $%.2f\n\n",
+				employee2.getEmployeeName(), employee2.getSalary() );
+		
+		employee1.raise(10);
+		employee2.raise(10);
+		
+		//Display the two Employee's name and Salary after the raise
+		System.out.println("After a 10% raise to each employee\n");
+		System.out.printf("Employee #1: %s's Yearly Salary: $%.2f\n",
+				employee1.getEmployeeName(), employee1.getSalary() );
+		System.out.printf("Employee #2: %s's Yearly Salary: $%.2f\n\n",
+				employee2.getEmployeeName(), employee2.getSalary() );
+		
+	}
+}

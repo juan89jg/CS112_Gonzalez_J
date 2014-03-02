@@ -1,0 +1,64 @@
+
+public class Date 
+{
+	//setting instance variables
+	int dateDay;
+	int dateMonth;
+	int dateYear;
+	
+	//method constructor of Date object	
+	public Date(int month, int day, int year)
+	{
+		//if month digit is greater than 0 and less than equal to 12
+		if (month > 0 && month <=12)
+			dateMonth = month; //set month to dateMonth
+		
+		//if day digit is greater than 0 and less than equal to 31
+		if (day > 0 && day <=31)
+			dateDay = day; // set day to dateDay
+		dateYear = year;	// set year to dateYear			
+	}// end constructor
+	
+	//method setDateDay to set the day
+	public void setDateDay(int day)
+	{
+		dateDay= day;
+	}//end method setDateDay
+	
+	//method setDateMonth
+	public void setDateMonth( int month)
+	{
+		dateMonth = month;
+	}
+
+	//method setDateYear
+	public void setDateYear( int year)
+	{
+		dateYear = year;
+	}
+
+	//method getDateDay
+	public int getDateDay()
+	{
+		return dateDay;
+	}
+	
+	//Method getDateMonth
+	public int getDateMonth()
+	{
+		return dateMonth;
+	}
+	
+	//Method getDateYear
+	public int getDateYear()
+	{
+		return dateYear;
+	}
+	
+	//Method DisplayDate
+	public void displayDate()
+	{
+		System.out.printf( "The Date is \n%d/%d/%d\n",
+				getDateMonth(), getDateDay(), getDateYear() );
+	}
+}

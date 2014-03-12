@@ -1,0 +1,40 @@
+import java.util.Scanner; //imports the scanner class
+
+public class ArithmeticWithTwoNumbers 
+{
+	//main method begins execution of java program
+	public static void main( String[]args)
+	{
+		//Create a Scanner to input information
+		Scanner input = new Scanner(System.in);
+		
+		//Declaring the variables
+		int Number1;
+		int Number2;
+		int Sum;
+		int Multiply;
+		int Divide;
+		int Subtract;
+		int Mod;
+		
+		System.out.println("Enter the Frist digit: ");
+		Number1 = input.nextInt();//Stores the input from user to number1 variable
+		
+		System.out.println("Enter the Second digit: ");
+		Number2 = input.nextInt();
+		
+		//makes the calculations
+		Sum  = Number1 + Number2;
+		Subtract = Number1 - Number2;
+		Multiply = Number1 * Number2;
+		Divide = Number1 / Number2;
+		Mod= Number1 % Number2;
+		
+		System.out.printf("The Addition of %d + %d = %d\n", Number1, Number2, Sum);
+		System.out.printf("The Subtraction of %d - %d = %d\n", Number1, Number2, Subtract);
+		System.out.printf("The Multiplication of %d x %d = %d\n", Number1, Number2, Multiply);
+		System.out.printf("The Division of %d / %d = %d\n", Number1, Number2, Divide);
+		System.out.printf("The Remainder of %d Mod %d = %d\n", Number1, Number2, Mod);
+		
+	}//End method main
+}//End class

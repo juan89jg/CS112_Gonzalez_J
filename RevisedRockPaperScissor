@@ -1,0 +1,103 @@
+
+import java.util.Scanner; // imports the Scanner class
+
+
+public class RockPaperScissorsGame 
+{
+	public static void main(String[]args)
+	{
+		//Create the Scanner input
+		Scanner input = new Scanner(System.in);
+		
+		//Create the Random number
+				
+		//Declaring the variables
+		int computerNumber;
+		String UserInput;
+		String ComputerDecision = "";
+		String EndGame = "";
+		
+		while (!EndGame.toUpperCase().startsWith("Q"))
+		{
+					
+			computerNumber = 1 + (int)(Math.random() * 3);
+		
+			System.out.println("Welcome to the Rock, Paper, Scissor's game");
+			System.out.println("Please type Rock, Paper, or Scissor: ");
+			UserInput = input.nextLine();
+
+			switch(computerNumber)
+			{
+				case 1:
+					ComputerDecision = "rock";
+					break;
+				case 2:
+					ComputerDecision = "paper";
+					break;
+				case 3:
+					ComputerDecision = "scissor";
+					break;
+			}//end switch
+		System.out.println("\nThe Result is:");
+		
+			if ((UserInput.toUpperCase().equals("ROCK")))
+			{
+				if (ComputerDecision.toUpperCase().equals("ROCK"))
+				{
+				System.out.println("Tied");
+				System.out.printf("You chose %s and computer chose %s", UserInput, ComputerDecision );
+				}
+				else if (ComputerDecision.toUpperCase().equals("PAPER"))
+				{
+				System.out.println("You Lost");
+				System.out.printf("You chose %s and computer chose %s", UserInput, ComputerDecision );
+				}
+				else if ((ComputerDecision.toUpperCase().equals("SCISSOR")))
+				{
+					System.out.println("You Won");
+					System.out.printf("You chose %s and computer chose %s", UserInput, ComputerDecision );
+				}
+			}//End of case Rock
+			else if ((UserInput.toUpperCase().equals("PAPER")))
+			{
+				if (ComputerDecision.toUpperCase().equals("PAPER"))
+					{		
+						System.out.println("Tied");
+						System.out.printf("You chose %s and computer chose %s", UserInput, ComputerDecision );	
+					}
+				else if((ComputerDecision.toUpperCase().equals("ROCK")))
+					{
+						System.out.println("You Won");
+						System.out.printf("You chose %s and computer chose %s", UserInput, ComputerDecision );
+					}
+				else if ((ComputerDecision.toUpperCase().equals("SCISSOR")))
+					{
+						System.out.println("You Lost");
+						System.out.printf("You chose %s and computer chose %s", UserInput, ComputerDecision );
+					}
+			}//End of case Paper
+			else if ((UserInput.toUpperCase().equals("SCISSOR")))
+					{
+						if ((ComputerDecision.toUpperCase().equals("ROCK")))
+						{
+							System.out.println("You Lost");
+							System.out.printf("You chose %s and computer chose %s", UserInput, ComputerDecision );
+						}
+		
+						else if ((ComputerDecision.toUpperCase().equals("PAPER")))
+						{
+							System.out.println("You Won");
+							System.out.printf("You chose %s and computer chose %s", UserInput, ComputerDecision );
+						}
+						else if ((ComputerDecision.toUpperCase().equals("SCISSOR")))
+						{
+							System.out.println("Tied");
+							System.out.printf("You chose %s and computer chose %s", UserInput, ComputerDecision );
+						}
+	
+					}//End of case scissor
+			System.out.println("\n\nWould you like to play again?\nEnter for yes and Q to quit");
+			EndGame = input.nextLine();
+		}
+	}//end method
+}//end class

@@ -45,7 +45,7 @@ public class RockPaperScissors
 				ComputerDecision = "paper";
 				break;
 			case 3:
-				ComputerDecision = "cissor";
+				ComputerDecision = "scissor";
 				break;
 		}
 	

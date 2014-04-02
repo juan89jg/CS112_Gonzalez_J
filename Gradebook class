@@ -1,0 +1,11 @@
+
+public class gradebook 
+{
+	public void displaymessage()
+	
+	{
+		System.out.println("Welcome to the Grade Book!");		
+	}
+	
+}
+

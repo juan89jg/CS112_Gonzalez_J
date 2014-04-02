@@ -1,0 +1,38 @@
+public class oddevengametest 
+{
+	public static void main(String[] args)
+	{
+	
+		Scanner input = new Scanner(System.in);
+		oddevengame myGame = new oddevengame();
+		String userguess;
+		String YesNO;
+		boolean KeepGoing = true;
+		
+		while(KeepGoing)
+		{
+			System.out.println("Welcome to the welcome to the odd even game!!\n please input odd or even: ");
+			userguess = input.next();
+		 
+			myGame.displaymessage(userguess);
+			
+			System.out.println("\nWould you like to continue?\nPress Y for yess N for no");
+			YesNO = input.next();
+			
+			if (YesNO.toUpperCase().startsWith("Y"))
+			{
+				KeepGoing = true;
+			}
+			else
+			{
+				KeepGoing = false;
+			}
+			
+			
+		}//End loop
+		
+		myGame.results();
+		
+	}
+
+}

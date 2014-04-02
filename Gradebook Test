@@ -1,0 +1,10 @@
+public class GradebookTest 
+{
+
+	public static void main(String[] args)
+	{
+	 gradebook mygradebook = new gradebook();
+	 
+	 mygradebook.displaymessage();
+	}
+}

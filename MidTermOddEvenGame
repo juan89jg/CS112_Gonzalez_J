@@ -1,0 +1,59 @@
+
+public class oddevengame
+{
+	int GamesPlayed= 0;
+	int GamesWon = 0;
+	int GamesLost = 0;
+	
+	
+	public void displaymessage(String number)
+	{
+		int computerNumber;
+		 
+		String CNumberOE;
+		
+		computerNumber = 0 + (int)(Math.random() *10);
+		
+		if (computerNumber % 2 == 0)
+		{
+			CNumberOE = "EVEN";
+		}
+		else 
+		{
+			CNumberOE = "ODD";
+		}
+		
+		if (number.toUpperCase().startsWith(CNumberOE) )
+		{
+			System.out.println("You Guessed right!");
+			System.out.printf("You Guessed an %s number and computer generated %d", number, computerNumber);
+			GamesPlayed ++;
+			GamesWon ++;
+		}
+		else
+		{
+			System.out.println("You Guessed wrong");
+			System.out.printf("You Guessed an %s number and computer generated an %d number", number, computerNumber);
+			GamesPlayed ++;
+			GamesLost ++;
+		}
+			
+	}
+	public void results()
+	{
+		if(GamesWon > GamesLost)
+		{
+			System.out.println("You Beat the Computer.............Congratulations");
+		}
+		else if( GamesWon < GamesLost)
+		{
+			System.out.println("The Computer beat you.... Beter luck next time");
+		}
+		else if(GamesWon == GamesLost)
+		{
+			System.out.println("You Tied with the computer");
+		}
+		System.out.printf("You played %d Games\nYou Won %d\nYou Lost %d", GamesPlayed, GamesWon, GamesLost);
+		
+	}
+}

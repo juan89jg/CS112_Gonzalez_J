@@ -20,7 +20,6 @@ public class GuessingNumberwithRandomMethod
 		
 		while(KeepPlaying)
 		{
-			computerNumber = GuessedNumber.GetANumber(10);
 					
 			System.out.println("Welcome to the Guessing game\nPlease enter a High Number that you would like the computer to generate.\n");
 			UserRange = input.nextInt();

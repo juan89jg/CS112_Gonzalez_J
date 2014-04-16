@@ -1,0 +1,15 @@
+import java.util.Random;
+
+public class RandomNumber 
+{
+	public int GetANumber_Between_1_and_10()
+	{
+		
+		Random randomNumber = new Random();
+		int computerNumber;
+		
+		computerNumber = 0 + (int)(Math.random() *10);
+		return computerNumber;
+	}
+		
+}

@@ -1,0 +1,15 @@
+import java.util.Random;
+
+public class RandomNumber 
+{
+	public int GetANumber(int low, int High)
+	{
+		
+		Random randomNumber = new Random();
+		int computerNumber;
+		
+		computerNumber = (low + (int)(Math.random() *High));
+		return computerNumber;
+	}
+		
+}

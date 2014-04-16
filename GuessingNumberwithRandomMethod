@@ -12,7 +12,7 @@ public class GuessingNumberwithRandomMethod
 		 		
 		//Declaring the variables
 		int UserNumber;
-		int computerNumber = GuessedNumber.GetANumber_Between_1_and_10();
+		int computerNumber;
 		boolean KeepGoing = true;
 		String YesNO;
 		

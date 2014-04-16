@@ -34,7 +34,7 @@ public class GuessingNumberwithRandomMethod
 			{
 				
 				
-				computerNumber = GuessedNumber.GetANumber(UserLowRange, UserHighRange);
+				computerNumber = GuessedNumber.GetAHighNumber(UserLowRange, UserHighRange);
 			
 				System.out.printf("Now Try to Guess the number between %d and %d\n",UserLowRange,UserHighRange);
 				UserNumber = input.nextInt();

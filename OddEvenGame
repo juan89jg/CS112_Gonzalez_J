@@ -1,0 +1,16 @@
+public class OddEvenGame 
+{
+	public static void main(String[] args)
+	{
+		//Create new object OddEven
+		// initialize with constructor
+		OddEven myGame = new OddEven("Y");
+		
+		//Display welcome message
+		myGame.displayMessage();
+		//Start the Game
+		myGame.playGame();
+		//Display results
+		myGame.displayResults();
+	}
+}

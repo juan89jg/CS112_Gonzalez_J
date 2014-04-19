@@ -1,0 +1,73 @@
+import java.util.Scanner;
+public class OddEven 
+{
+	int RandomNumber;
+	int computerNumber;
+	int GameCount;
+	int GameWins;
+	int GameLose;
+	String Guess;
+	String ComputerResult;
+	String Play;
+	String KeepPlaying;
+	boolean KeepGoing = true;
+	Scanner input = new Scanner(System.in);
+	
+	public OddEven(String play)
+	{
+		if (play.toUpperCase().startsWith("Y"))
+		{
+			KeepGoing = true;
+		}
+		else
+		{
+			KeepGoing = false;
+		}
+	}
+	public void displayMessage()
+	{
+		System.out.println("Welcome to the Odd / Even Game");
+		
+	}
+	public void playGame()
+	{
+		
+		while(KeepGoing)
+		{
+			RandomNumber =  0 + (int)(Math.random() *10);
+			computerNumber = RandomNumber % 2;
+			if (computerNumber == 1)
+			{
+				ComputerResult = "ODD";
+			}
+			else if (computerNumber == 0)
+			{
+				ComputerResult = "EVEN";
+			}
+			System.out.println("Please Guess Odd or Even: ");
+			Guess = input.next();
+			if(Guess.toUpperCase().equals(ComputerResult))
+			{
+				System.out.printf("You won\nYou Guessed %s\ncomputer number was %d\n\n", Guess, RandomNumber);
+				++GameCount;
+				++GameWins;
+			}
+			else
+			{
+				System.out.printf("You Lost\nYou Guessed %s\nComputer number was %d\n\n", Guess, RandomNumber);
+				++GameCount;
+				++GameLose;
+			}
+			System.out.println("Would you like to keep Playing?");
+			KeepPlaying = input.next();
+			if(KeepPlaying.toUpperCase().startsWith("N"))
+			{
+				KeepGoing = false;
+			}
+		}//End while loop
+	}//End Game method
+	public void displayResults()
+	{
+		System.out.printf("Here are your results\nGames Played %d\nGames Won %d\nGames Lost %d\nThanks for playing", GameCount, GameWins, GameLose);
+	}
+}//End Class
